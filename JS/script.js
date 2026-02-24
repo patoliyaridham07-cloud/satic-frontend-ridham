@@ -1,1 +1,1 @@
-console.log("Day 1 Task Loaded")
+console.log("Day 1 Task Loaded");
