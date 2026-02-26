@@ -1,3 +1,4 @@
+console.log(navbar);
 const hamburger = document.querySelector(".hamburger");
 const navbar = document.querySelector(".navbar");
 const navLinks = document.querySelectorAll(".nav-links a");
