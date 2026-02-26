@@ -14,7 +14,7 @@ hamburger.addEventListener("click", () => {
     }
 });
 
-/* Auto close on link click */
+
 navLinks.forEach(link => {
     link.addEventListener("click", () => {
         navbar.classList.remove("nav-open");
