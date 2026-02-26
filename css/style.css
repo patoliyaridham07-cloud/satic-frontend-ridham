@@ -108,15 +108,19 @@ footer {
 .nav-links a.active {
     border-bottom: 2px solid var(--primary-color);
 }
+/* Hide mobile CTA on desktop */
 .mobile-cta {
     display: none;
 }
 
+/* Hamburger hidden on desktop */
 .hamburger {
     display: none;
     font-size: 24px;
     cursor: pointer;
 }
+
+/* ========== MOBILE STYLES ========== */
 @media (max-width: 768px) {
 
     .desktop-cta {
@@ -148,6 +152,8 @@ footer {
     .mobile-cta {
         display: inline-block;
     }
+
+    /* When menu open */
     .nav-open .nav-links {
         right: 0;
     }
