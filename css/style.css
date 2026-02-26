@@ -141,7 +141,7 @@ footer {
     .nav-open .nav-links {
         right: 0;
     }
-}@media (max-width: 768px) {
+@media (max-width: 768px) {
 
   /* Hide desktop elements */
   .nav-links {
