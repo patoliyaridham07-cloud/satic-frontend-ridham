@@ -3,22 +3,22 @@ const navbar = document.querySelector(".navbar");
 const navLinks = document.querySelectorAll(".nav-links a");
 
 hamburger.addEventListener("click", () => {
-    navbar.classList.toggle("nav-open");
+  navbar.classList.toggle("nav-open");
 
-    if (navbar.classList.contains("nav-open")) {
-        hamburger.textContent = "✖";
-        document.body.style.overflow = "hidden";
-    } else {
-        hamburger.textContent = "☰";
-        document.body.style.overflow = "auto";
-    }
+  if (navbar.classList.contains("nav-open")) {
+    hamburger.textContent = "✖";
+    document.body.style.overflow = "hidden";
+  } else {
+    hamburger.textContent = "☰";
+    document.body.style.overflow = "auto";
+  }
 });
 
-
+/* Auto close */
 navLinks.forEach(link => {
-    link.addEventListener("click", () => {
-        navbar.classList.remove("nav-open");
-        hamburger.textContent = "☰";
-        document.body.style.overflow = "auto";
-    });
+  link.addEventListener("click", () => {
+    navbar.classList.remove("nav-open");
+    hamburger.textContent = "☰";
+    document.body.style.overflow = "auto";
+  });
 });
