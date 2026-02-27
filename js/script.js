@@ -23,3 +23,17 @@ navLinks.forEach(link => {
     document.body.style.overflow = "auto";
   });
 });
+const form = document.getElementById("searchForm");
+const input = document.getElementById("searchInput");
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault(); // Stop page reload
+
+  const value = input.value.trim();
+
+  if (value === "") {
+    alert("Please enter a search term");
+  } else {
+    console.log("Searching for:", value);
+  }
+});
