@@ -169,6 +169,56 @@ footer {
   .mobile-only {
     display: block;
   }
+    /* HERO SECTION */
+.hero {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  margin-bottom: 20px;
+}
+
+/* SEARCH BAR */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  max-width: 400px;
+  margin: auto;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-right: none;
+  outline: none;
+}
+
+/* Focus State */
+.search-bar input:focus {
+  border-color: var(--primary-color);
+}
+
+/* Button */
+.search-bar button {
+  padding: 10px 15px;
+  border: 2px solid var(--primary-color);
+  background: var(--primary-color);
+  color: white;
+  cursor: pointer;
+}
+
+/* Hover State */
+.search-bar button:hover {
+  opacity: 0.8;
+}
+
+/* Hide label visually */
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+}
 
   /* When menu open */
   .nav-open .nav-links {
