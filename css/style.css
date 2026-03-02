@@ -284,3 +284,15 @@ footer {
     right: 0;
   }
 }
+.secondary-btn {
+  padding: 8px 15px;
+  border: 2px solid var(--primary-color);
+  background: transparent;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.secondary-btn:hover {
+  background: var(--primary-color);
+  color: white;
+}
