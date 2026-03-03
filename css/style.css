@@ -220,6 +220,17 @@ footer {
   left: -9999px;
 }
 /* PROJECT SECTION */
+    
+.projects-container {  
+  display: flex;  
+  gap: 20px;  
+  flex-wrap: wrap;  
+}  
+  
+.project-card {  
+  flex: 1;  
+  min-width: 280px;  
+}
 .projects {
   padding: 60px 20px;
 }
