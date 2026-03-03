@@ -296,3 +296,60 @@ footer {
   background: var(--primary-color);
   color: white;
 }
+/* Toast Container */
+#toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+/* Base Toast */
+.toast {
+  min-width: 250px;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 6px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: slideIn 0.3s ease;
+}
+
+/* Success */
+.toast.success {
+  background: green;
+}
+
+/* Error */
+.toast.error {
+  background: red;
+}
+
+/* Close Button */
+.toast button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Playground section spacing */
+.notification-section {
+  padding: 40px 20px;
+  text-align: center;
+}
