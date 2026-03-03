@@ -37,3 +37,37 @@ form.addEventListener("submit", function(event) {
     console.log("Searching for:", value);
   }
 });
+const toastContainer = document.getElementById("toast-container");
+const successBtn = document.getElementById("successBtn");
+const errorBtn = document.getElementById("errorBtn");
+
+function showToast(message, type) {
+  const toast = document.createElement("div");
+  toast.classList.add("toast", type);
+
+  toast.innerHTML = `
+    <span>${message}</span>
+    <button>&times;</button>
+  `;
+
+  toastContainer.appendChild(toast);
+
+  // Manual close
+  toast.querySelector("button").addEventListener("click", () => {
+    toast.remove();
+  });
+
+  // Auto dismiss after 3 sec
+  setTimeout(() => {
+    toast.remove();
+  }, 3000);
+}
+
+// Button events
+successBtn.addEventListener("click", () => {
+  showToast("Success! Task completed.", "success");
+});
+
+errorBtn.addEventListener("click", () => {
+  showToast("Error! Something went wrong.", "error");
+});
