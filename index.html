@@ -9,173 +9,86 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
 <header>
   <nav class="navbar">
-
     <div class="logo">Ridham</div>
 
-    <!-- Links -->
     <ul class="nav-links">
       <li><a href="#" class="active">Home</a></li>
       <li><a href="#">Projects</a></li>
       <li><a href="#">Contact</a></li>
-
-      <!-- Mobile CTA (inside menu) -->
       <li class="mobile-only">
         <button class="btn btn-primary">Hire Me</button>
       </li>
     </ul>
 
-    <!-- Desktop CTA -->
     <button class="btn btn-primary desktop-only">Hire Me</button>
-
-    <!-- Hamburger -->
     <div class="hamburger">☰</div>
-
   </nav>
-    <!-- Hero Section -->
-<section class="hero">
-  <div class="hero-content">
-    <h1>Find Your Internship</h1>
-<!-- Projects Section -->
-      <section class="notification-section">
-  <h2>Notification Playground</h2>
-
-  <button id="successBtn" class="secondary-btn">
-    Trigger Success
-  </button>
-
-  <button id="errorBtn" class="secondary-btn">
-    Trigger Error
-  </button>
-</section>
-<section class="projects">
-  <h2>My Projects</h2>
-  <div class="projects-container">
-    
-    <div class="project-card">
-      <h3>Portfolio Website</h3>
-      <p>Personal site built with HTML/CSS.</p>
-      <button>View Project</button>
-    </div>
-
-    <div class="project-card">
-      <h3>Weather App</h3>
-      <p>React app that fetches live weather.</p>
-      <button>View Project</button>
-    </div>
-
-    <div class="project-card">
-      <h3>E-commerce Platform</h3>
-      <p>Full-stack shop with cart & payment.</p>
-      <button>View Project</button>
-    </div>
-
-  </div>
-</section>
-  <div class="project-grid">
-
-    <!-- Card 1 -->
-    <div class="card">
-      <div class="card-image">
-        <img src="https://picsum.photos/400/300?1" alt="Project Image">
-      </div>
-
-      <div class="card-content">
-        <h3>Portfolio Website</h3>
-        <p>Short description about this project.</p>
-
-        <button class="secondary-btn">View Project</button>
-      </div>
-    </div>
-
-    <!-- Card 2 -->
-    <div class="card">
-      <div class="card-image">
-        <img src="https://picsum.photos/400/300?2" alt="Project Image">
-      </div>
-
-      <div class="card-content">
-        <h3>E-commerce UI</h3>
-        <p>
-          Medium length description for this project to show how
-          cards adjust when text increases.
-        </p>
-
-        <button class="secondary-btn">View Project</button>
-      </div>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="card">
-      <div class="card-image">
-        <img src="https://picsum.photos/400/300?3" alt="Project Image">
-      </div>
-
-      <div class="card-content">
-        <h3>Dashboard Design</h3>
-        <p>
-          Long description example. This card contains more content
-          to test equal height behavior and button alignment at
-          the bottom of the card.
-        </p>
-
-        <button class="secondary-btn">View Project</button>
-      </div>
-    </div>
-</section>
-    <form id="searchForm" class="search-bar">
-      
-      <!-- Accessible Label -->
-      <label for="searchInput" class="visually-hidden">
-        Search Internship
-      </label>
-
-      <input 
-        type="text" 
-        id="searchInput" 
-        placeholder="Search internships..."
-        aria-label="Search Internship"
-      >
-
-      <button type="submit">
-        🔍
-      </button>
-
-    </form>
-  </div>
-</section>
 </header>
+
 <main>
-    <section>
-        <h3>My Frontend Journey</h3>
-        <ul>
-            <li>Day 1: Setup & Deployment (Completed)</li>
-        </ul>
-    </section>
-    <section class="card">
-    <h2>Button Component System</h2>
 
-    <div class="button-group">
-        
-        <button class="btn btn-primary">Primary Button</button>
-        <button class="btn btn-primary">Sign Up</button>
-        <button class="btn btn-primary" disabled>Primary Disabled</button>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Find Your Internship</h1>
 
-       
-        <button class="btn btn-outline">Outline Button</button>
-        <button class="btn btn-outline">Learn More</button>
-        <button class="btn btn-outline" disabled>Outline Disabled</button>
+      <form id="searchForm" class="search-bar">
+        <input type="text" placeholder="Search internships...">
+        <button type="submit">🔍</button>
+      </form>
     </div>
-</section>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects">
+    <h2>My Projects</h2>
+
+    <div class="projects-container">
+
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>Personal site built with HTML/CSS.</p>
+        <button>View Project</button>
+      </div>
+
+      <div class="project-card">
+        <h3>Weather App</h3>
+        <p>React app that fetches live weather.</p>
+        <button>View Project</button>
+      </div>
+
+      <div class="project-card">
+        <h3>E-commerce Platform</h3>
+        <p>Full-stack shop with cart & payment.</p>
+        <button>View Project</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Notification Section -->
+  <section class="notification-section">
+    <h2>Notification Playground</h2>
+
+    <button id="successBtn" class="secondary-btn">
+      Trigger Success
+    </button>
+
+    <button id="errorBtn" class="secondary-btn">
+      Trigger Error
+    </button>
+  </section>
+
 </main>
 
 <footer>
-    <p>© 2026 Ridham Patoliya</p>
+  <p>© 2026 Ridham Patoliya</p>
 </footer>
-<!-- Toast Container -->
+
 <div id="toast-container"></div>
 <script src="js/script.js"></script>
-    
+
 </body>
-</html>
