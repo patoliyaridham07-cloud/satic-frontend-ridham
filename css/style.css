@@ -299,9 +299,8 @@ footer {
 /* Toast Container */
 #toast-container {
   position: fixed;
-  top: 20px;
   right: 20px;
-  z-index: 9999;
+  bottom: 20px;
 }
 
 /* Base Toast */
