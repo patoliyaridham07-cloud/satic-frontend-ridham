@@ -90,3 +90,81 @@ if (errorBtn) {
     showToast("Error! Something went wrong.", "error");
   });
 }
+/* ================= CONTACT VALIDATION ================= */
+
+const contactForm = document.getElementById("contactForm");
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const messageInput = document.getElementById("message");
+const submitBtn = document.getElementById("submitBtn");
+
+const nameError = document.getElementById("nameError");
+const emailError = document.getElementById("emailError");
+const messageError = document.getElementById("messageError");
+
+function validateName() {
+  const value = nameInput.value.trim();
+
+  if (value.length < 3) {
+    nameError.textContent = "Name must be at least 3 characters.";
+    nameInput.classList.add("invalid");
+    nameInput.classList.remove("valid");
+    return false;
+  }
+
+  nameError.textContent = "";
+  nameInput.classList.remove("invalid");
+  nameInput.classList.add("valid");
+  return true;
+}
+
+function validateEmail() {
+  const value = emailInput.value.trim();
+
+  if (!value.includes("@") || !value.includes(".")) {
+    emailError.textContent = "Enter a valid email.";
+    emailInput.classList.add("invalid");
+    emailInput.classList.remove("valid");
+    return false;
+  }
+
+  emailError.textContent = "";
+  emailInput.classList.remove("invalid");
+  emailInput.classList.add("valid");
+  return true;
+}
+
+function validateMessage() {
+  const value = messageInput.value.trim();
+
+  if (value === "") {
+    messageError.textContent = "Message cannot be empty.";
+    messageInput.classList.add("invalid");
+    messageInput.classList.remove("valid");
+    return false;
+  }
+
+  messageError.textContent = "";
+  messageInput.classList.remove("invalid");
+  messageInput.classList.add("valid");
+  return true;
+}
+
+function checkFormValidity() {
+  if (validateName() && validateEmail() && validateMessage()) {
+    submitBtn.disabled = false;
+  } else {
+    submitBtn.disabled = true;
+  }
+}
+
+/* Real-time validation */
+nameInput.addEventListener("input", checkFormValidity);
+emailInput.addEventListener("input", checkFormValidity);
+messageInput.addEventListener("input", checkFormValidity);
+
+/* Prevent default submit */
+contactForm.addEventListener("submit", function(e) {
+  e.preventDefault();
+  alert("Form Submitted Successfully!");
+});
