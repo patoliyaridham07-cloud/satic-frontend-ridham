@@ -81,12 +81,45 @@
       Trigger Error
     </button>
   </section>
+    <!-- ================= CONTACT SECTION ================= -->
+<section class="contact-section">
+  <h2>Contact Me</h2>
 
-</main>
+  <form id="contactForm">
 
+    <!-- Name -->
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name">
+      <span class="error-msg" id="nameError"></span>
+    </div>
+
+    <!-- Email -->
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email">
+      <span class="error-msg" id="emailError"></span>
+    </div>
+
+    <!-- Message -->
+    <div class="form-group">
+      <label for="message">Message:</label>
+      <textarea id="message"></textarea>
+      <span class="error-msg" id="messageError"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary" id="submitBtn" disabled>
+      Send Message
+    </button>
+
+  </form>
+</section>
 <footer>
   <p>© 2026 Ridham Patoliya</p>
 </footer>
+
+</main>
+
 
 <div id="toast-container"></div>
 <script src="js/script.js"></script>
