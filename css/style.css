@@ -292,3 +292,51 @@ footer {
     align-items: center;
   }
 }
+/* ================= CONTACT FORM ================= */
+
+.contact-section {
+  padding: 60px 20px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+/* Error message */
+.error-msg {
+  color: red;
+  font-size: 12px;
+}
+
+/* Success State */
+.valid {
+  border-color: green !important;
+}
+
+/* Error State */
+.invalid {
+  border-color: red !important;
+}
+
+/* Disabled button */
+#submitBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
