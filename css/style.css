@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 html, body {
   height: 100%;
   margin: 0;
@@ -393,4 +396,36 @@ footer {
     flex-direction: column;
     text-align: center;
   }
+}
+/* Back To Top Button */
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+  border: none;
+
+  background-color: #007bff;
+  color: white;
+  font-size: 22px;
+
+  cursor: pointer;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.3s ease;
+
+  z-index: 100;
+}
+
+/* Show button */
+.back-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
 }
