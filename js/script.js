@@ -168,3 +168,27 @@ contactForm.addEventListener("submit", function(e) {
   e.preventDefault();
   alert("Form Submitted Successfully!");
 });
+const backToTopBtn = document.getElementById("backToTop");
+
+/* Show button after scroll */
+window.addEventListener("scroll", () => {
+
+  if (window.scrollY > 500) {
+    backToTopBtn.classList.add("show");
+  } 
+  else {
+    backToTopBtn.classList.remove("show");
+  }
+
+});
+
+/* Scroll to top when clicked */
+
+backToTopBtn.addEventListener("click", () => {
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+});
