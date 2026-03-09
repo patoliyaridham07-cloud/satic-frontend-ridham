@@ -1,3 +1,18 @@
+:root{
+  /* Colors */
+  --bg-surface:#0f172a;
+  --text-primary:#ffffff;
+  --brand-accent:#38bdf8;
+
+  /* Typography */
+  --fs-h1:clamp(2rem,5vw,3.5rem);
+  --fs-text:clamp(1rem,2vw,1.2rem);
+
+  /* Spacing */
+  --space-sm:0.5rem;
+  --space-md:1rem;
+  --space-lg:2rem;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -423,7 +438,37 @@ footer {
 
   z-index: 100;
 }
+.hero{
+  min-height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:var(--bg-surface);
+  color:var(--text-primary);
+  padding:var(--space-lg);
+}
 
+.hero h1{
+  font-size:var(--fs-h1);
+}
+
+.hero-bio{
+  font-size:var(--fs-text);
+  max-width:40ch;
+  margin:auto;
+  margin-top:var(--space-md);
+}
+
+.btn{
+  display:inline-block;
+  margin-top:var(--space-md);
+  padding:0.7rem 1.5rem;
+  background:var(--brand-accent);
+  color:#000;
+  text-decoration:none;
+  border-radius:5px;
+}
 /* Show button */
 .back-to-top.show {
   opacity: 1;
