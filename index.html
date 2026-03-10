@@ -1,170 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Ridham Patoliya - Frontend Internship</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
-    
-    <link rel="stylesheet" href="css/style.css">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ridham Patoliya - Frontend Internship</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
 </head>
+
 <body>
 
+<!-- ================= NAVBAR ================= -->
+
 <header class="navbar">
-  <div class="nav-container">
 
-    <div class="logo">MyPortfolio</div>
+<div class="nav-container">
 
-    <nav class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+<div class="logo">MyPortfolio</div>
 
-    <button class="hamburger" aria-expanded="false">
-      ☰
-    </button>
+<nav class="nav-links">
+<a href="#home">Home</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
 
-  </div>
+<button class="hamburger" aria-expanded="false">
+☰
+</button>
+
+</div>
+
 </header>
-    <section class="hero">
-  <div class="hero-container">
-    <h1>Hi, I'm Ridham</h1>
-    <p class="hero-bio">
-      I am a Frontend Developer who builds responsive and modern websites.
-    </p>
-    <a href="#projects" class="btn">View My Work</a>
-  </div>
-</section>
+
 
 <main>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Find Your Internship</h1>
+<!-- ================= HERO ================= -->
 
-      <form id="searchForm" class="search-bar">
-        <input type="text" placeholder="Search internships...">
-        <button type="submit">🔍</button>
-      </form>
-    </div>
-  </section>
+<section class="hero" id="home">
 
-  <!-- Projects Section -->
-  <section class="projects">
-    <h2>My Projects</h2>
+<div class="hero-container">
 
-    <div class="projects-container">
+<h1>Hi, I'm Ridham</h1>
 
-      <div class="project-card">
-        <h3>Portfolio Website</h3>
-        <p>Personal site built with HTML/CSS.</p>
-        <button>View Project</button>
-      </div>
+<p class="hero-bio">
+I am a Frontend Developer who builds responsive and modern websites.
+</p>
 
-      <div class="project-card">
-        <h3>Weather App</h3>
-        <p>React app that fetches live weather.</p>
-        <button>View Project</button>
-      </div>
+<a href="#projects" class="btn">
+View My Work
+</a>
 
-      <div class="project-card">
-        <h3>E-commerce Platform</h3>
-        <p>Full-stack shop with cart & payment.</p>
-        <button>View Project</button>
-      </div>
+</div>
 
-    </div>
-  </section>
-
-  <!-- Notification Section -->
-  <section class="notification-section">
-    <h2>Notification Playground</h2>
-
-    <button id="successBtn" class="secondary-btn">
-      Trigger Success
-    </button>
-
-    <button id="errorBtn" class="secondary-btn">
-      Trigger Error
-    </button>
-  </section>
-    <!-- ================= CONTACT SECTION ================= -->
-<section class="contact-section">
-  <h2>Contact Me</h2>
-
-  <form id="contactForm">
-
-    <!-- Name -->
-    <div class="form-group">
-      <label for="name">Name:</label>
-      <input type="text" id="name">
-      <span class="error-msg" id="nameError"></span>
-    </div>
-
-    <!-- Email -->
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" id="email">
-      <span class="error-msg" id="emailError"></span>
-    </div>
-
-    <!-- Message -->
-    <div class="form-group">
-      <label for="message">Message:</label>
-      <textarea id="message"></textarea>
-      <span class="error-msg" id="messageError"></span>
-    </div>
-
-    <button type="submit" class="btn btn-primary" id="submitBtn" disabled>
-      Send Message
-    </button>
-
-  </form>
 </section>
-<footer>
-  <p>© 2026 Ridham Patoliya</p>
-</footer>
+
+
+<!-- ================= SEARCH ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Find Your Internship</h1>
+
+<form id="searchForm" class="search-bar">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search internships..."
+>
+
+<button type="submit">🔍</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section class="projects" id="projects">
+
+<h2>My Projects</h2>
+
+<div class="projects-container">
+
+<div class="project-card">
+<h3>Portfolio Website</h3>
+<p>Personal site built with HTML/CSS.</p>
+<button>View Project</button>
+</div>
+
+<div class="project-card">
+<h3>Weather App</h3>
+<p>React app that fetches live weather.</p>
+<button>View Project</button>
+</div>
+
+<div class="project-card">
+<h3>E-commerce Platform</h3>
+<p>Full-stack shop with cart & payment.</p>
+<button>View Project</button>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= NOTIFICATION ================= -->
+
+<section class="notification-section">
+
+<h2>Notification Playground</h2>
+
+<button id="successBtn" class="secondary-btn">
+Trigger Success
+</button>
+
+<button id="errorBtn" class="secondary-btn">
+Trigger Error
+</button>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact-section" id="contact">
+
+<h2>Contact Me</h2>
+
+<form id="contactForm">
+
+<div class="form-group">
+<label for="name">Name:</label>
+<input type="text" id="name">
+<span class="error-msg" id="nameError"></span>
+</div>
+
+<div class="form-group">
+<label for="email">Email:</label>
+<input type="email" id="email">
+<span class="error-msg" id="emailError"></span>
+</div>
+
+<div class="form-group">
+<label for="message">Message:</label>
+<textarea id="message"></textarea>
+<span class="error-msg" id="messageError"></span>
+</div>
+
+<button
+type="submit"
+class="btn btn-primary"
+id="submitBtn"
+disabled
+>
+Send Message
+</button>
+
+</form>
+
+</section>
 
 </main>
-    <footer class="site-footer">
-  <div class="footer-container">
 
-    <!-- Column 1 -->
-    <div class="footer-col">
-      <h3>Your Name</h3>
-      <p>Frontend Developer. Building cool things.</p>
-    </div>
 
-    <!-- Column 2 -->
-    <div class="footer-col">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
+<!-- ================= FOOTER ================= -->
 
-    <!-- Column 3 -->
-    <div class="footer-col">
-      <h3>Socials</h3>
-      <ul>
-        <li><a href="#">GitHub</a></li>
-        <li><a href="#">LinkedIn</a></li>
-      </ul>
-    </div>
+<footer class="site-footer">
 
-  </div>
+<div class="footer-container">
+
+<div class="footer-col">
+<h3>Ridham Patoliya</h3>
+<p>Frontend Developer building modern websites.</p>
+</div>
+
+<div class="footer-col">
+<h3>Quick Links</h3>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</div>
+
+<div class="footer-col">
+
+<h3>Socials</h3>
+
+<ul>
+<li><a href="#">GitHub</a></li>
+<li><a href="#">LinkedIn</a></li>
+</ul>
+
+</div>
+
+</div>
+
 </footer>
-    <!-- Back To Top Button -->
+
+
+<!-- ================= BACK TO TOP ================= -->
+
 <button id="backToTop" class="back-to-top">
-  ↑
+↑
 </button>
 
 
+<!-- ================= TOAST ================= -->
+
 <div id="toast-container"></div>
+
+
+<!-- ================= JS ================= -->
+
 <script src="js/script.js"></script>
 
 </body>
+</html>
