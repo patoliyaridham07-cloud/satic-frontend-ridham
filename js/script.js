@@ -5,29 +5,45 @@ const navbar = document.querySelector(".navbar");
 const navLinks = document.querySelectorAll(".nav-links a");
 
 if (hamburger && navbar) {
+
   hamburger.addEventListener("click", () => {
+
     navbar.classList.toggle("nav-open");
 
     if (navbar.classList.contains("nav-open")) {
       hamburger.textContent = "✖";
+      hamburger.setAttribute("aria-expanded","true");
       document.body.style.overflow = "hidden";
-    } else {
+    } 
+    else {
       hamburger.textContent = "☰";
+      hamburger.setAttribute("aria-expanded","false");
       document.body.style.overflow = "auto";
     }
+
   });
+
 }
 
 /* Auto close when clicking link */
+
 if (navLinks.length > 0) {
+
   navLinks.forEach(link => {
+
     link.addEventListener("click", () => {
+
       navbar.classList.remove("nav-open");
       hamburger.textContent = "☰";
+      hamburger.setAttribute("aria-expanded","false");
       document.body.style.overflow = "auto";
+
     });
+
   });
+
 }
+
 
 /* ================= SEARCH FORM ================= */
 
@@ -35,18 +51,24 @@ const form = document.getElementById("searchForm");
 const input = document.getElementById("searchInput");
 
 if (form && input) {
+
   form.addEventListener("submit", function(event) {
+
     event.preventDefault();
 
     const value = input.value.trim();
 
     if (value === "") {
       alert("Please enter a search term");
-    } else {
+    } 
+    else {
       console.log("Searching for:", value);
     }
+
   });
+
 }
+
 
 /* ================= TOAST NOTIFICATION ================= */
 
@@ -55,6 +77,7 @@ const successBtn = document.getElementById("successBtn");
 const errorBtn = document.getElementById("errorBtn");
 
 function showToast(message, type) {
+
   if (!toastContainer) return;
 
   const toast = document.createElement("div");
@@ -67,32 +90,39 @@ function showToast(message, type) {
 
   toastContainer.appendChild(toast);
 
-  // Manual close
   toast.querySelector("button").addEventListener("click", () => {
     toast.remove();
   });
 
-  // Auto remove after 3 sec
   setTimeout(() => {
     toast.remove();
   }, 3000);
+
 }
 
-/* Button Events */
 if (successBtn) {
+
   successBtn.addEventListener("click", () => {
     showToast("Success! Task completed.", "success");
   });
+
 }
 
 if (errorBtn) {
+
   errorBtn.addEventListener("click", () => {
     showToast("Error! Something went wrong.", "error");
   });
+
 }
-/* ================= CONTACT VALIDATION ================= */
+
+
+/* ================= CONTACT FORM VALIDATION ================= */
 
 const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
 const messageInput = document.getElementById("message");
@@ -102,109 +132,115 @@ const nameError = document.getElementById("nameError");
 const emailError = document.getElementById("emailError");
 const messageError = document.getElementById("messageError");
 
-function validateName() {
-  const value = nameInput.value.trim();
+function validateName(){
 
-  if (value.length < 3) {
-    nameError.textContent = "Name must be at least 3 characters.";
-    nameInput.classList.add("invalid");
-    nameInput.classList.remove("valid");
-    return false;
-  }
+const value = nameInput.value.trim();
 
-  nameError.textContent = "";
-  nameInput.classList.remove("invalid");
-  nameInput.classList.add("valid");
-  return true;
+if(value.length < 3){
+
+nameError.textContent = "Name must be at least 3 characters.";
+nameInput.classList.add("invalid");
+nameInput.classList.remove("valid");
+return false;
+
 }
 
-function validateEmail() {
-  const value = emailInput.value.trim();
+nameError.textContent="";
+nameInput.classList.remove("invalid");
+nameInput.classList.add("valid");
+return true;
 
-  if (!value.includes("@") || !value.includes(".")) {
-    emailError.textContent = "Enter a valid email.";
-    emailInput.classList.add("invalid");
-    emailInput.classList.remove("valid");
-    return false;
-  }
-
-  emailError.textContent = "";
-  emailInput.classList.remove("invalid");
-  emailInput.classList.add("valid");
-  return true;
 }
 
-function validateMessage() {
-  const value = messageInput.value.trim();
+function validateEmail(){
 
-  if (value === "") {
-    messageError.textContent = "Message cannot be empty.";
-    messageInput.classList.add("invalid");
-    messageInput.classList.remove("valid");
-    return false;
-  }
+const value = emailInput.value.trim();
 
-  messageError.textContent = "";
-  messageInput.classList.remove("invalid");
-  messageInput.classList.add("valid");
-  return true;
+if(!value.includes("@") || !value.includes(".")){
+
+emailError.textContent="Enter a valid email.";
+emailInput.classList.add("invalid");
+emailInput.classList.remove("valid");
+return false;
+
 }
 
-function checkFormValidity() {
-  if (validateName() && validateEmail() && validateMessage()) {
-    submitBtn.disabled = false;
-  } else {
-    submitBtn.disabled = true;
-  }
+emailError.textContent="";
+emailInput.classList.remove("invalid");
+emailInput.classList.add("valid");
+return true;
+
 }
 
-/* Real-time validation */
-nameInput.addEventListener("input", checkFormValidity);
-emailInput.addEventListener("input", checkFormValidity);
-messageInput.addEventListener("input", checkFormValidity);
+function validateMessage(){
 
-/* Prevent default submit */
-contactForm.addEventListener("submit", function(e) {
-  e.preventDefault();
-  alert("Form Submitted Successfully!");
+const value = messageInput.value.trim();
+
+if(value === ""){
+
+messageError.textContent="Message cannot be empty.";
+messageInput.classList.add("invalid");
+messageInput.classList.remove("valid");
+return false;
+
+}
+
+messageError.textContent="";
+messageInput.classList.remove("invalid");
+messageInput.classList.add("valid");
+return true;
+
+}
+
+function checkFormValidity(){
+
+if(validateName() && validateEmail() && validateMessage()){
+submitBtn.disabled=false;
+}
+else{
+submitBtn.disabled=true;
+}
+
+}
+
+nameInput.addEventListener("input",checkFormValidity);
+emailInput.addEventListener("input",checkFormValidity);
+messageInput.addEventListener("input",checkFormValidity);
+
+contactForm.addEventListener("submit",function(e){
+
+e.preventDefault();
+alert("Form Submitted Successfully!");
+
 });
+
+}
+
+
+/* ================= BACK TO TOP ================= */
+
 const backToTopBtn = document.getElementById("backToTop");
 
-/* Show button after scroll */
+if(backToTopBtn){
+
 window.addEventListener("scroll", () => {
 
-  if (window.scrollY > 500) {
-    backToTopBtn.classList.add("show");
-  } 
-  else {
-    backToTopBtn.classList.remove("show");
-  }
+if(window.scrollY > 500){
+backToTopBtn.classList.add("show");
+}
+else{
+backToTopBtn.classList.remove("show");
+}
 
 });
-
-/* Scroll to top when clicked */
 
 backToTopBtn.addEventListener("click", () => {
 
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
 
 });
-const hamburger = document.querySelector(".hamburger");
-const navLinks = document.querySelector(".nav-links");
 
-hamburger.addEventListener("click", () => {
-
-  navLinks.classList.toggle("active");
-
-  if (navLinks.classList.contains("active")) {
-    hamburger.textContent = "✖";
-    hamburger.setAttribute("aria-expanded", "true");
-  } else {
-    hamburger.textContent = "☰";
-    hamburger.setAttribute("aria-expanded", "false");
-  }
-
-});
+}
