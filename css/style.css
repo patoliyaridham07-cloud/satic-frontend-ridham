@@ -240,6 +240,33 @@ header{
   border-radius:8px;
   box-shadow:0 4px 10px rgba(0,0,0,0.05);
 }
+/* ================= BENTO GRID ================= */
+
+.about-section{
+  padding:60px 20px;
+}
+
+.bento-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  max-width:1000px;
+  margin:auto;
+}
+
+.bento-card{
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Large card */
+
+.bento-card.large{
+  grid-column:span 2;
+  grid-row:span 2;
+}
 
 /* ================= TOAST ================= */
 
@@ -418,6 +445,25 @@ a:focus-visible{
   .footer-container{
     flex-direction:column;
     text-align:center;
+  }
+
+}
+/* Tablet */
+
+@media (max-width:900px){
+
+  .bento-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+/* Mobile */
+
+@media (max-width:600px){
+
+  .bento-grid{
+    grid-template-columns:1fr;
   }
 
 }
