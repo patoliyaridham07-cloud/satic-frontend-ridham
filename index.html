@@ -211,45 +211,34 @@ Trigger Error
 
 <!-- ================= CONTACT ================= -->
 
-<section class="contact-section" id="contact">
+<section class="contact" id="contact">
 
 <h2>Contact Me</h2>
 
 <form id="contactForm">
 
 <div class="form-group">
-<label for="name">Name:</label>
-<input type="text" id="name">
-<span class="error-msg" id="nameError"></span>
+<input type="text" id="name" required placeholder=" ">
+<label for="name">Your Name</label>
 </div>
 
 <div class="form-group">
-<label for="email">Email:</label>
-<input type="email" id="email">
-<span class="error-msg" id="emailError"></span>
+<input type="email" id="email" required placeholder=" ">
+<label for="email">Email Address</label>
 </div>
 
 <div class="form-group">
-<label for="message">Message:</label>
-<textarea id="message"></textarea>
-<span class="error-msg" id="messageError"></span>
+<textarea id="message" required placeholder=" "></textarea>
+<label for="message">Your Message</label>
 </div>
 
-<button
-type="submit"
-class="btn btn-primary"
-id="submitBtn"
-disabled
->
-Send Message
-</button>
+<button type="submit" class="btn">Send Message</button>
+
+<p id="formMsg"></p>
 
 </form>
 
 </section>
-
-</main>
-
 
 <!-- ================= FOOTER ================= -->
 
