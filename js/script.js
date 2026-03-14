@@ -242,5 +242,26 @@ behavior:"smooth"
 });
 
 });
-
 }
+const form = document.getElementById("contactForm");
+const email = document.getElementById("email");
+const msg = document.getElementById("formMsg");
+
+form.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+if(!emailPattern.test(email.value)){
+msg.textContent="Please enter a valid email";
+msg.style.color="red";
+return;
+}
+
+msg.textContent="Message sent successfully!";
+msg.style.color="green";
+
+form.reset();
+
+});
