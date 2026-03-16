@@ -6,166 +6,115 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ridham Patoliya - Frontend Internship</title>
-<meta name="description" content="Ridham's Frontend Developer Portfolio showcasing projects, experience and contact information">
+<title>Ridham | Frontend Developer</title>
 
-<meta property="og:title" content="Ridham | Frontend Developer Portfolio">
+<meta name="description" content="Ridham's Frontend Developer Portfolio">
 
-<meta property="og:description" content="Explore my web development projects, experience and skills.">
-
+<meta property="og:title" content="Ridham Portfolio">
+<meta property="og:description" content="Frontend Developer Portfolio">
 <meta property="og:image" content="preview.webp">
-
 <meta property="og:type" content="website">
 
-<meta property="og:url" content="https://your-site-url.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
+<header>
 
-<header class="navbar">
+<nav class="navbar">
 
-<div class="nav-container">
+<h1 class="logo">Ridham</h1>
 
-<div class="logo">MyPortfolio</div>
+<button class="hamburger" aria-expanded="false">☰</button>
 
-<nav class="nav-links">
-<a href="#home">Home</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
+<ul class="nav-links">
+
+<li><a href="#home">Home</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
 </nav>
-
-<button class="hamburger" aria-expanded="false">
-☰
-</button>
-
-</div>
 
 </header>
 
 
 <main>
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
 
-<section class="hero" id="home">
+<section id="home" class="hero">
 
-<div class="hero-container">
+<h2>Hello, I'm Ridham</h2>
 
-<h1>Hi, I'm Ridham</h1>
+<p>Frontend Developer passionate about building modern responsive websites.</p>
 
-<p class="hero-bio">
-I am a Frontend Developer who builds responsive and modern websites.
-</p>
-
-<a href="#projects" class="btn">
-View My Work
-</a>
-
-</div>
-
-</section>
-<section class="about-section">
-
-  <h2>About Me</h2>
-
-  <div class="bento-grid">
-
-    <div class="bento-card large">
-      <h3>Frontend Developer</h3>
-      <p>I build responsive and modern web interfaces using HTML, CSS and JavaScript.</p>
-    </div>
-
-    <div class="bento-card">
-      <h3>Skills</h3>
-      <p>HTML, CSS, JavaScript, React</p>
-    </div>
-
-    <div class="bento-card">
-      <h3>Experience</h3>
-      <p>Frontend internship and personal projects.</p>
-    </div>
-
-    <div class="bento-card">
-      <h3>Location</h3>
-      <p>Ahmedabad, India</p>
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ================= SEARCH ================= -->
-
-<section class="hero">
-
-<div class="hero-content">
-
-<h1>Find Your Internship</h1>
-
-<form id="searchForm" class="search-bar">
-
-<input
-type="text"
-id="searchInput"
-placeholder="Search internships..."
->
-
-<button type="submit">🔍</button>
-
-</form>
-
-</div>
+<a href="#projects" class="btn">View My Work</a>
 
 </section>
 
 
-<!-- ================= PROJECTS ================= -->
+<!-- PROJECTS -->
 
-<section class="projects" id="projects">
+<section id="projects" class="projects">
 
 <h2>My Projects</h2>
 
 <div class="projects-grid">
 
 <article class="project-card">
-<article class="project-card">
 
-<img src="project1.webp" alt="Portfolio website project preview">
+<img src="images/project1.webp" alt="Portfolio project preview">
 
 <h3>Portfolio Website</h3>
 
-<p>Personal site built with HTML, CSS and responsive design.</p>
+<p>Responsive personal portfolio built with HTML CSS and JavaScript.</p>
 
 <button class="btn">View Project</button>
 
 </article>
-  <h3>Portfolio Website</h3>
-  <p>Personal site built with HTML, CSS and responsive design.</p>
-  <button class="btn">View Project</button>
-</article>
+
 
 <article class="project-card">
-  <h3>Weather App</h3>
-  <p>React app that fetches real-time weather data.</p>
-  <button class="btn">View Project</button>
+
+<img src="images/project2.webp" alt="Weather app preview">
+
+<h3>Weather App</h3>
+
+<p>Weather application using API to show real-time data.</p>
+
+<button class="btn">View Project</button>
+
 </article>
 
-<article class="project-card">
-  <h3>E-commerce Platform</h3>
-  <p>Online shop with cart, checkout and payment system.</p>
-  <button class="btn">View Project</button>
-</article>
 
 <article class="project-card">
-  <h3>Landing Page</h3>
-  <p>Modern marketing landing page with animations.</p>
-  <button class="btn">View Project</button>
+
+<img src="images/project3.webp" alt="Ecommerce preview">
+
+<h3>Ecommerce UI</h3>
+
+<p>Online store interface with responsive product layout.</p>
+
+<button class="btn">View Project</button>
+
+</article>
+
+
+<article class="project-card">
+
+<img src="images/project4.webp" alt="Landing page preview">
+
+<h3>Landing Page</h3>
+
+<p>Modern marketing landing page with smooth animations.</p>
+
+<button class="btn">View Project</button>
+
 </article>
 
 </div>
@@ -173,22 +122,9 @@ placeholder="Search internships..."
 </section>
 
 
-<!-- ================= NOTIFICATION ================= -->
+<!-- EXPERIENCE -->
 
-<section class="notification-section">
-
-<h2>Notification Playground</h2>
-
-<button id="successBtn" class="secondary-btn">
-Trigger Success
-</button>
-
-<button id="errorBtn" class="secondary-btn">
-Trigger Error
-</button>
-
-</section>
-<section class="experience" id="experience">
+<section id="experience" class="experience">
 
 <h2>Experience</h2>
 
@@ -204,17 +140,15 @@ Trigger Error
 
 </div>
 
-
 <div class="timeline-item">
 
 <h3>Web Development Project</h3>
 
 <time datetime="2024-09">Sep 2024 - Dec 2024</time>
 
-<p>Developed a personal portfolio with responsive design and animations.</p>
+<p>Developed a responsive personal portfolio website.</p>
 
 </div>
-
 
 <div class="timeline-item">
 
@@ -222,7 +156,7 @@ Trigger Error
 
 <time datetime="2024-05">May 2024 - Jul 2024</time>
 
-<p>Designed and launched a small business landing page.</p>
+<p>Created landing page for a small business client.</p>
 
 </div>
 
@@ -230,27 +164,39 @@ Trigger Error
 
 </section>
 
-<!-- ================= CONTACT ================= -->
 
-<section class="contact" id="contact">
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
 
 <h2>Contact Me</h2>
 
 <form id="contactForm">
 
 <div class="form-group">
+
 <input type="text" id="name" required placeholder=" ">
+
 <label for="name">Your Name</label>
+
 </div>
 
+
 <div class="form-group">
+
 <input type="email" id="email" required placeholder=" ">
+
 <label for="email">Email Address</label>
+
 </div>
 
+
 <div class="form-group">
+
 <textarea id="message" required placeholder=" "></textarea>
+
 <label for="message">Your Message</label>
+
 </div>
 
 <button type="submit" class="btn">Send Message</button>
@@ -261,59 +207,18 @@ Trigger Error
 
 </section>
 
-<!-- ================= FOOTER ================= -->
+</main>
 
-<footer class="site-footer">
 
-<div class="footer-container">
+<footer>
 
-<div class="footer-col">
-<h3>Ridham Patoliya</h3>
-<p>Frontend Developer building modern websites.</p>
-</div>
-
-<div class="footer-col">
-<h3>Quick Links</h3>
-
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-
-</div>
-
-<div class="footer-col">
-
-<h3>Socials</h3>
-
-<ul>
-<li><a href="#">GitHub</a></li>
-<li><a href="#">LinkedIn</a></li>
-</ul>
-
-</div>
-
-</div>
+<p>© 2025 Ridham | Frontend Developer</p>
 
 </footer>
 
 
-<!-- ================= BACK TO TOP ================= -->
-
-<button id="backToTop" class="back-to-top">
-↑
-</button>
-
-
-<!-- ================= TOAST ================= -->
-
-<div id="toast-container"></div>
-
-
-<!-- ================= JS ================= -->
-
-<script src="js/script.js"></script>
+<script src="script.js"></script>
 
 </body>
+
 </html>
